@@ -42,6 +42,7 @@ export const theme = extendTheme({
   },
   colors: {
     kc: {
+      'a': 'rgba(18, 135, 3, 0.3)',
       500: '#128703',
     },
     'kc-dark': {
