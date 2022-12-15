@@ -27,11 +27,11 @@ const NoInternetConnection = () => {
   // if user is online, return the child component else return a custom component
 
   return (
-    <Box h={isOnline ? '100px' : 0}>
+    <Flex align={'center'} color="white" h={isOnline ? 0 : '48px'} bg="orange.400" display={isOnline ? "none" : "block"}>
       <Flex w="100%" align="center" justify="center">
         No Internet Connection. Please try again later.
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 

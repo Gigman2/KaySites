@@ -17,6 +17,7 @@ export interface ICustomButtonProps extends ButtonProps {
   color?: string;
   leftIcon?: ButtonOptions['leftIcon'];
   rightIcon?: ButtonOptions['rightIcon'];
+  invert?: string;
 }
 
 interface ICustomButtonStyleProps {
@@ -36,6 +37,7 @@ function Component({
   py = { base: 3, md: 6 },
   px = { base: 4, md: 8 },
   rounded = 'md',
+  invert,
   cursor = 'pointer',
   _focus = {
     outline: 'none',
@@ -70,21 +72,21 @@ function Component({
       },
     },
     solid: {
-      bg: `${color}.500`,
-      color: 'white',
+      bg: invert === 'yes' ? 'white' : `${color}.500`,
+      color: invert === 'yes' ?  `${color}.500` : 'white' ,
       borderWidth: 2,
-      borderColor: `${color}.500`,
+      borderColor:invert === 'yes' ? 'white': `${color}.500`,
       _hover: {
-        bg: `${color}.600`,
-        borderColor: `${color}.600`,
+        bg: invert === 'yes' ? 'white' :`${color}.600`,
+        borderColor: invert === 'yes' ? 'white' :`${color}.600`,
       },
       _focus: {
-        bg: `${color}.600`,
-        borderColor: `${color}.600`,
+        bg:invert === 'yes' ? 'white': `${color}.600`,
+        borderColor:invert === 'yes' ? 'white' : `${color}.600`,
       },
       _active: {
-        bg: `${color}.600`,
-        borderColor: `${color}.600`,
+        bg:invert === 'yes' ? 'white' :  `${color}.600`,
+        borderColor:invert === 'yes' ? 'white' : `${color}.600`,
       },
     },
     link: {
