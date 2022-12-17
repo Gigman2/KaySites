@@ -10,7 +10,7 @@ import NoInternetConnection from 'components/Blocks/NoInternetConnection';
 import { theme } from './theme/theme';
 import 'assets/styles/index.css';
 
-const App = lazy(() => import('./containers/app'));
+const App = lazy(() => import('containers/app/index'));
 
 const { ToastContainer } = createStandaloneToast({ theme });
 
