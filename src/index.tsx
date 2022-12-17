@@ -9,8 +9,7 @@ import LoadingTopBar from 'components/Blocks/FetchCard/LoadingBar';
 import NoInternetConnection from 'components/Blocks/NoInternetConnection';
 import { theme } from './theme/theme';
 import 'assets/styles/index.css';
-
-const App = lazy(() => import('containers/app/index'));
+import App from 'containers/app/index'
 
 const { ToastContainer } = createStandaloneToast({ theme });
 
