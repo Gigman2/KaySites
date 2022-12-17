@@ -2,7 +2,6 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 // CONTEXT
-import { BrowserTracing } from '@sentry/tracing';
 import withSuspenseAndErrorBoundary from 'hocs/withSuspenseAndErrorBoundary';
 import Router from '../../routes/Router';
 import useAutoRemoveScrollBar from '../../hooks/useAutoRemoveScrollBar';
