@@ -8,7 +8,9 @@ function Layout() {
         <Header />
         <Flex>
             <Sidebar type="client"/>
-            <Outlet />
+            <Box mt={14} flex={1} px={8}>
+                <Outlet />
+            </Box>
         </Flex>
     </Box>
 }

@@ -26,6 +26,8 @@ const routes = {
   // dashboard
   dashboard: createRoute('/dashboard', LINKS.DASHBOARD),
   applications: createRoute('applications', LINKS.DASHBOARD),
+  payment: createRoute('payment', LINKS.DASHBOARD),
+
 }
 
 export const pathTo = Object.fromEntries(
