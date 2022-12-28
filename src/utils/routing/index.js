@@ -27,6 +27,8 @@ const routes = {
   dashboard: createRoute('/dashboard', LINKS.DASHBOARD),
   applications: createRoute('applications', LINKS.DASHBOARD),
   payment: createRoute('payment', LINKS.DASHBOARD),
+  documentLibrary: createRoute('document-library', LINKS.DASHBOARD),
+
 
 }
 

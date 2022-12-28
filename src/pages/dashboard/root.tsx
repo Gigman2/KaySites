@@ -6,6 +6,7 @@ import { pathTo } from 'utils/routing';
 const Layout = lazy(() => import('containers/layout/index'));
 const Applications = lazy(() => import('./components/applications'));
 const Payments = lazy(() => import('./components/payment'));
+const Documents = lazy(() => import('./components/documents'));
 
 
 function DashboardRoot() {
@@ -17,6 +18,7 @@ function DashboardRoot() {
             element={<Navigate to={pathTo.applications} replace={true} />}
           />
           <Route path={pathTo.applications} element={<Applications />} />
+          <Route path={pathTo.documentLibrary} element={<Documents />} />
           <Route path={pathTo.payment} element={<Payments />} />
       </Route>
       {/* <Route path={pathTo.register} element={<SignUp />} /> */}

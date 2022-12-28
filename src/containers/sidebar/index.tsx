@@ -11,7 +11,7 @@ function Sidebar({type}: {type: string}) {
         {dashboardRoutes[type].map(item => {
         return (
             <Box width={"100%"} key={item.name} 
-                py={4} _hover={{bg: 'kc.a', borderRightWidth: 3, borderColor: "kc.500"}} 
+                py={4} _hover={{bg: 'kc.200', borderRightWidth: 3, borderColor: "kc.500"}} 
                 cursor="pointer">
                 <Flex pl={16} align="center" color="kc.500" gap={4}>
                     <Box w={6} h={5} bg="gray.200" rounded={"md"}></Box>
