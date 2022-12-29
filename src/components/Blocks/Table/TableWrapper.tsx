@@ -35,7 +35,6 @@ const TableWrapper = ({
       },
     }}
     bg={data?.length === 0 && !loading ? 'transparent' : 'white'}
-    rounded="lg"
     w="100%"
   >
     <Box

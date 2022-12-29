@@ -35,7 +35,7 @@ const TableHead = ({
     );
   }
   return (
-    <Box as="thead" w="100%">
+    <Box as="thead" w="100%" bg="kc.500">
       <Box as="tr" w="100%">
         {(data || [])?.length > 0 &&
           tableHead?.map((item) => (
@@ -43,13 +43,13 @@ const TableHead = ({
               key={item?.id}
               as="th"
               px={4}
-              py={5}
+              py={6}
               borderBottomWidth={1}
               textAlign="left"
               fontSize="sm"
-              fontWeight="bold"
+              fontWeight={500}
               lineHeight={4}
-              color=" #6E7575"
+              color=" #fff"
               textTransform="capitalize"
             >
               {item?.name}

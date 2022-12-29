@@ -46,8 +46,7 @@ const Table = ({
   const currentData = data || [];
   return (
     <Flex direction="column" w="100%" h="100%" position="relative">
-       (
-        <TableWrapper
+       <TableWrapper
           overflowX="auto"
           data={currentData || []}
           tableHeads={columns}
@@ -65,6 +64,7 @@ const Table = ({
                       1
                     : i + 1
                 }
+                isEven={i%2 === 0}
                 key={(item as { _id: string })?._id}
                 renderer={columns}
                 item={item}
@@ -74,7 +74,6 @@ const Table = ({
             ))}
           </Box>
         </TableWrapper>
-      )
 
       {!noPagination && pagination && currentData?.length > 0 ? (
         <TablePagination

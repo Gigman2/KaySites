@@ -4,6 +4,7 @@ import t from 'typy';
 import { rem } from '../../../helpers/misc';
 
 const TableContent = ({
+  isEven,
   renderer,
   item,
   index,
@@ -14,6 +15,7 @@ const TableContent = ({
   isClickable?: boolean;
   item: unknown;
   index: number;
+  isEven?: boolean;
   renderer: {
     name: string;
     id: string | number;
@@ -27,7 +29,9 @@ const TableContent = ({
     overflowX="scroll"
     as="tr"
     fontSize="md"
-    borderBottom="1px solid #E2E8F0"
+    bg={isEven ? "gray.100": 'white'}
+    borderBottomWidth={1}
+    borderColor="kc.500"
     cursor={isClickable ? 'pointer' : 'inherit'}
     onClick={() => {
       if (onClick) {
@@ -44,7 +48,7 @@ const TableContent = ({
           p={4}
           whiteSpace="nowrap"
           color="#333333"
-          fontSize={rem(16)}
+          fontSize={rem(14)}
           lineHeight={rem(24)}
         >
           {typeof selector?.selector === 'string' &&
