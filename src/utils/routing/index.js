@@ -1,5 +1,5 @@
 import { generatePath } from 'react-router-dom';
-import { LINKS, Links } from '../types';
+import { LINKS } from '../types';
 
 // Can be potentially made even smarter:
 // see https://www.smashingmagazine.com/2021/01/dynamic-static-typing-typescript/
@@ -26,10 +26,10 @@ const routes = {
   // dashboard
   dashboard: createRoute('/dashboard', LINKS.DASHBOARD),
   applications: createRoute('applications', LINKS.DASHBOARD),
-  payment: createRoute('payment', LINKS.DASHBOARD),
+  payment: createRoute('payments', LINKS.DASHBOARD),
+  addCardPayment: createRoute('add-card', LINKS.DASHBOARD),
   documentLibrary: createRoute('document-library', LINKS.DASHBOARD),
-
-
+  applicationProgress: createRoute('application-progress', LINKS.DASHBOARD),
 }
 
 export const pathTo = Object.fromEntries(

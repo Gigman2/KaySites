@@ -2,11 +2,12 @@ import withSuspenseAndErrorBoundary from 'hocs/withSuspenseAndErrorBoundary';
 import React, { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { pathTo } from 'utils/routing';
+import ApplicationProgress from '../components/progress';
+import PaymentRoot from './paymentRoot';
 
 const Layout = lazy(() => import('containers/layout/index'));
-const Applications = lazy(() => import('./components/applications'));
-const Payments = lazy(() => import('./components/payment'));
-const Documents = lazy(() => import('./components/documents'));
+const Applications = lazy(() => import('../components/applications'));
+const Documents = lazy(() => import('../components/documents'));
 
 
 function DashboardRoot() {
@@ -19,7 +20,8 @@ function DashboardRoot() {
           />
           <Route path={pathTo.applications} element={<Applications />} />
           <Route path={pathTo.documentLibrary} element={<Documents />} />
-          <Route path={pathTo.payment} element={<Payments />} />
+          <Route path={pathTo.payment} element={<PaymentRoot />} />
+          <Route path={pathTo.applicationProgress} element={<ApplicationProgress />} />
       </Route>
       {/* <Route path={pathTo.register} element={<SignUp />} /> */}
       {/* <Route path={pathTo.auth} element={<Auth />} /> */}
