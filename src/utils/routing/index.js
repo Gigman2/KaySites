@@ -23,11 +23,15 @@ const routes = {
   login: createRoute('login', LINKS.ROOT),
   logout: createRoute('logout', LINKS.ROOT),
 
-  // dashboard
+  // DASHBOARD
   dashboard: createRoute('/dashboard', LINKS.DASHBOARD),
   applications: createRoute('applications', LINKS.DASHBOARD),
+
+  // PAYMENT //
   payment: createRoute('payments', LINKS.DASHBOARD),
-  addCardPayment: createRoute('add-card', LINKS.DASHBOARD),
+  addCard: createRoute('add-card', LINKS.DASHBOARD),
+  addBank: createRoute('add-bank-transfer', LINKS.DASHBOARD),
+
   documentLibrary: createRoute('document-library', LINKS.DASHBOARD),
   applicationProgress: createRoute('application-progress', LINKS.DASHBOARD),
 }

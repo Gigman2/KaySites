@@ -7,8 +7,8 @@ function Layout() {
     return <Box>
         <Header />
         <Flex>
-            <Sidebar type="client"/>
-            <Box mt={14} flex={1} px={8}>
+            <Sidebar />
+            <Box mt={14} flex={1} pl={12} pr={14}>
                 <Outlet />
             </Box>
         </Flex>

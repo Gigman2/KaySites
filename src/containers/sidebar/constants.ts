@@ -2,29 +2,29 @@ export const clientPages = [
     {
         icon: null,
         name: "My Application",
-        path: "application",
+        path: "applications",
         id: 1
     },
     {
         icon: null,
         name: "Document Library",
-        path: "application",
+        path: "document-library",
         id: 2
     },
     {
         icon: null,
         name: "Messages",
-        path: "application",
+        path: "messages",
         id: 3
     },{
         icon: null,
         name: "Payment Information",
-        path: "application",
+        path: "payments",
         id: 4
     },{
         icon: null,
         name: "Application Progress",
-        path: "application",
+        path: "application-progress",
         id: 5
     }
 ]

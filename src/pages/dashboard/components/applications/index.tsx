@@ -1,26 +1,30 @@
+import {useEffect} from 'react'
 import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import { CustomButton } from "components/Atoms";
 import PageHeader from "components/Blocks/Header";
+import useLayout from "stores/layout";
+import KCInput from 'components/Atoms/Form/KcInput';
 
 function Application() {
+    const { setDashboard } = useLayout(['setDashboard'])
+
+    useEffect(() => {
+      setDashboard('client')
+    }, [])
+    
+
     return (
     <Box>
         <PageHeader title="Application"/>
         <Grid  templateColumns={{base: 'repeat(1, 1fr)',  md: 'repeat(2, 1fr)' }} gap={12}>
             <GridItem>
-                <Box p={6}>
-                    <Text fontWeight={600} color="kc.500">Institution name*</Text>
-                </Box>
-                <Box  p={6} bg={'kc.100'}>
-                    <Text fontSize={13} color="gray.500">Institution must be same as  appears on the Registrar General's Certificate</Text>
+                <Box  p={6} >
+                    <KCInput title='Institution name' subTitle="Institution must be same as  appears on the Registrar General's Certificate" />
                 </Box>
             </GridItem>
             <GridItem>
-                <Box p={6}>
-                    <Text fontWeight={600} color="kc.500">Application Type*</Text>
-                </Box>
-                <Box  p={6} bg={'kc.100'}>
-                    <Text fontSize={13} color="gray.500">Application must be same as  appears on the Registrar General's Certificate</Text>
+                <Box  p={6} >
+                    <KCInput title='Application Type' subTitle="Application must be same as  appears on the Registrar General's Certificate" />
                 </Box>
             </GridItem>
         </Grid>
