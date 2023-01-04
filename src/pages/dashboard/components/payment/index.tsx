@@ -2,7 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { CustomButton } from "components/Atoms";
 import PageHeader from "components/Blocks/Header";
 import { useNavigate } from "react-router-dom";
-import { linkTo, pathTo } from "utils/routing";
+import { pathTo } from "utils/routing";
 
 function Payment() {
     const navigate = useNavigate()

@@ -2,20 +2,28 @@ import { Box, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
 import { CustomButton } from "components/Atoms";
 import KCInput from "components/Atoms/Form/KcInput";
 import KCInput1 from "components/Atoms/Form/KcInput1";
+import KCSelect from "components/Atoms/Form/KcSelect";
 import KCTextarea from "components/Atoms/Form/KcTextarea";
 
 import PageHeader from "components/Blocks/Header";
-import { AiOutlineCaretDown } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function AddCardPayment() {
+    const navigate = useNavigate()
+
+    const handleChange = (data: string) => {
+        navigate(`/dashboard/payments/${data}`)
+    }
     return (
     <Box>
-        <PageHeader title="Payment Information">
-            <Flex textTransform={"uppercase"} letterSpacing={-0.8} fontSize={14} fontWeight={600}>
-                <Text>Payment Type</Text>
-                <Icon as={AiOutlineCaretDown} boxSize={6} ml={4  } />
-            </Flex>
-        </PageHeader>
+            <PageHeader title="Payment Information">
+                <KCSelect options={[
+                    {key: "add-card", name: "Card Payment"},
+                    {key: "add-bank-transfer", name: "Bank Transfer"},
+
+                ] || []} placeholder="Payment Type"
+                onChange={(item: {name: string; key: string} | string) => handleChange((item as {name: string; key: string})?.key)} />
+            </PageHeader>
 
         <Grid w="100%" templateColumns="repeat(12, 1fr)" columnGap={12}  mt={12}>
             <Box as={GridItem} colSpan={8} mb={8}>
