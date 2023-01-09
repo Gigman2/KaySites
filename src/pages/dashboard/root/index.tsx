@@ -27,11 +27,6 @@ function DashboardRoot() {
           
           <Route path={pathTo.applicationProgress} element={<ApplicationProgress />} />
       </Route>
-      {/* <Route path={pathTo.register} element={<SignUp />} /> */}
-      {/* <Route path={pathTo.auth} element={<Auth />} /> */}
-      {/* <Route path={pathTo.logout} element={<LogOut />} /> */}
-      {/* <Route path={`${pathTo.error}`} element={<NotFound />} /> */}
-      {/* <Route path="*" element={<Navigate replace={true} to={pathTo.error} />} /> */}
     </Routes>
   );
 }

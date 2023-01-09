@@ -4,6 +4,7 @@ import Sidebar from "containers/sidebar";
 import { Outlet } from "react-router-dom";
 
 function Layout() {
+
     return <Box>
         <Header />
         <Flex>

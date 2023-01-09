@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { CustomButton } from "components/Atoms";
 import KCInput from "components/Atoms/Form/KcInput";
 import KCInput1 from "components/Atoms/Form/KcInput1";

@@ -45,7 +45,7 @@ const TableContent = ({
         <Box
           key={selector.id}
           as="td"
-          p={4}
+          p={3}
           whiteSpace="nowrap"
           color="#333333"
           fontSize={rem(14)}

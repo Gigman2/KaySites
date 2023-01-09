@@ -25,6 +25,8 @@ const routes = {
 
   // DASHBOARD
   dashboard: createRoute('/dashboard', LINKS.DASHBOARD),
+  
+  // APPLICATIONS //
   applications: createRoute('applications', LINKS.DASHBOARD),
 
   // PAYMENT //
@@ -32,8 +34,18 @@ const routes = {
   addCard: createRoute('add-card', LINKS.DASHBOARD),
   addBank: createRoute('add-bank-transfer', LINKS.DASHBOARD),
 
+  // LIBRARY //
   documentLibrary: createRoute('document-library', LINKS.DASHBOARD),
+
+  // PROGRESS //
   applicationProgress: createRoute('application-progress', LINKS.DASHBOARD),
+
+
+  // ADMIN
+  admin: createRoute('/admin', LINKS.ADMIN),
+
+  // HOME //
+  home: createRoute('home', LINKS.ADMIN),
 }
 
 export const pathTo = Object.fromEntries(

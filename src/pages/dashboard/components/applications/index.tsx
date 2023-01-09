@@ -9,7 +9,8 @@ function Application() {
     const { setDashboard } = useLayout(['setDashboard'])
 
     useEffect(() => {
-      setDashboard('client')
+        setDashboard('admin')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
 
