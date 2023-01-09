@@ -2,11 +2,8 @@ import withSuspenseAndErrorBoundary from 'hocs/withSuspenseAndErrorBoundary';
 import React, { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { pathTo } from 'utils/routing';
-import AddBankTransfer from '../components/payment/addBankTransfer';
 import ApplicationProgress from '../components/progress';
-
-const Payments = lazy(() => import('../components/payment'));
-const AddCardPayment = lazy(() => import('../components/payment/addCardPayment'));
+import PaymentRoot from './paymentRoot';
 
 
 const Layout = lazy(() => import('containers/layout/index'));
@@ -25,9 +22,8 @@ function DashboardRoot() {
           <Route path={pathTo.applications} element={<Applications />} />
           <Route path={pathTo.documentLibrary} element={<Documents />} />
           
-          <Route path={`${pathTo.payment}/${pathTo.addBank}`} element={<AddBankTransfer />}/>
-          <Route path={`${pathTo.payment}/${pathTo.addCard}`} element={<AddCardPayment />}/>
-          <Route path={pathTo.payment} element={<Payments />} />
+
+          <Route path={`${pathTo.payment}/*`} element={<PaymentRoot />} />
           
           <Route path={pathTo.applicationProgress} element={<ApplicationProgress />} />
       </Route>
