@@ -24,6 +24,7 @@ const routes = {
   logout: createRoute('logout', LINKS.ROOT),
 
   // DASHBOARD
+  // HOME
   dashboard: createRoute('/dashboard', LINKS.DASHBOARD),
   
   // APPLICATIONS //
@@ -42,10 +43,12 @@ const routes = {
 
 
   // ADMIN
+  // HOME
   admin: createRoute('/admin', LINKS.ADMIN),
 
-  // HOME //
   home: createRoute('home', LINKS.ADMIN),
+  application: createRoute('application', LINKS.ADMIN),
+
 }
 
 export const pathTo = Object.fromEntries(

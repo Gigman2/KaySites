@@ -1,9 +1,10 @@
 import {useEffect} from 'react'
-import { Box, Flex, Grid, GridItem, Input, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Icon, Input, Text } from "@chakra-ui/react";
 import PageHeader from "components/Blocks/Header/header2";
 import useLayout from "stores/layout";
 import { CustomButton } from 'components/Atoms';
 import DashboardCard from 'components/Blocks/DashboardCard';
+import { AiFillCaretDown } from 'react-icons/ai';
 
 function Home() {
     const { setDashboard } = useLayout(['setDashboard'])
@@ -16,25 +17,11 @@ function Home() {
 
     return (
     <Box>
-        <PageHeader title='Home'>
+        <PageHeader title='All Applications'>
             <Flex color="kc.500" align={"center"}>
-                <Text fontWeight={600} fontSize={14} mr={6}>Filter by Date</Text>
-                <Flex columnGap={4}>
-                    <Box>
-                        <Input color="kc.500" type={"date"} w={52} borderWidth={1} borderColor={"kc.500"}/>
-                    </Box>
-                    <Box>
-                        <Input color="kc.500" type={"date"} w={52} borderWidth={1} borderColor={"kc.500"}/>
-                    </Box>
-                    <Box>
-                        <CustomButton title="Generate new report" 
-                            color="kc" btype='solid' 
-                            py={1}
-                            h={10}
-                            fontSize={14} 
-                            fontWeight={500}
-                        />
-                    </Box>
+                <Flex columnGap={4} px={4} py={2} rounded={"md"} borderWidth={1} borderColor="kc.500" align={"center"}>
+                    <Text>Year: January - December(2022)</Text>
+                    <Icon as={AiFillCaretDown}/>
                 </Flex>
             </Flex>
         </PageHeader>

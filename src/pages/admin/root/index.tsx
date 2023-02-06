@@ -6,6 +6,8 @@ import { pathTo } from 'utils/routing';
 
 const Layout = lazy(() => import('containers/layout/index'));
 const Home = lazy(() => import('../components/home'))
+const Application = lazy(() => import('../components/Application'))
+
 
 function AdminRoot() {
     return (
@@ -16,6 +18,7 @@ function AdminRoot() {
                     element={<Navigate to={pathTo.home} replace={true} />}
                 />
                 <Route path={pathTo.home} element={<Home />} />
+                <Route path={pathTo.application} element={<Application />} />
             </Route>
         </Routes>
     );
