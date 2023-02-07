@@ -116,4 +116,106 @@ export const adminPages = [
             },
         ]
     },
+    {
+        icon: MdOutlinePolicy,
+        name: "Policy Document",
+        path: "policy-document",
+        id: 4,
+        children: [
+            {
+                name: "All Documents",
+                path: "documents",
+            }
+        ]
+    },
+    {
+        icon: TbMessages,
+        name: "Messages",
+        path: "messages",
+        id: 5,
+        children: [
+            {
+                name: "Send messages to Institution",
+                path: "send",
+            }
+        ]
+    },
+    {
+        icon: TbBuildingBank,
+        name: "Institutions",
+        path: "institutions",
+        id: 6,
+        children: [
+            {
+                name: "All Institution",
+                path: "all",
+            },
+            {
+                name: "Existing Institution",
+                path: "existing",
+            },
+            {
+                name: "New Institution",
+                path: "new",
+            },
+            {
+                name: "Renewal-All Institutions",
+                path: "all-renewal",
+            },
+            {
+                name: "Renewal-Existing Institutions",
+                path: "existing-renewal",
+            },
+            {
+                name: "Renewal-New Institutions",
+                path: "new-renewal",
+            },
+            {
+                name: "All Licensed Institutions",
+                path: "all-licensed",
+            },
+            {
+                name: "Licensed Institutions Sent to",
+                path: "licensed-sent-to",
+            },
+        ]
+    },
+    {
+        icon: RiBankCardFill,
+        name: "Fees",
+        path: "fees",
+        id: 7
+    },
+    {
+        icon: TbUserPlus,
+        name: "Registered Users",
+        path: "registered-users",
+        id: 8
+    },
+    {
+        icon: MdOutlineDocumentScanner,
+        name: "Financials",
+        path: "financials",
+        id: 9
+    },
+    {
+        icon: MdOutlineSettingsSuggest,
+        name: "Settings",
+        path: "settings",
+        id: 10,
+        children: [
+            {
+                name: "Manager Fiscal Years",
+                path: "fiscal-years",
+            },
+            {
+                name: "Form Notifications",
+                path: "notifications",
+            },
+            {
+                name: "Carousel Photos",
+                path: "photos",
+            }
+        ]
+    },
 ]

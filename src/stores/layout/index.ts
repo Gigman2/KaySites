@@ -9,9 +9,10 @@ interface IUseLayoutStore {
   currentPage:  number | null;
   setCurrentPage: (n: number) => void;
   setDashboard  : (n: 'client' | 'admin') => void;
-  sideBarWidth: number | null,
+  sidebarWidth: number,
   showChildren: boolean,
   setShowChildren: (n: boolean) => void;
+  setSidebarWidth: (n: number) => void;
 }
 
 export const useLayoutStore = create(
@@ -19,14 +20,17 @@ export const useLayoutStore = create(
     (set) => ({
       dashboard: null,
       currentPage: null,
-      sideBarWidth: null,
+      sidebarWidth: 0,
+      showChildren: false,
       setCurrentPage: (b: number) => {
         set({ currentPage: b });
+      },
+      setSidebarWidth: (b: number) => {
+        set({ sidebarWidth: b });
       },
       setDashboard(d: 'client' | 'admin') {
         set({ dashboard: d });
       },
-      showChildren: false,
       setShowChildren: (v) => {
         set({ showChildren: v });
       }

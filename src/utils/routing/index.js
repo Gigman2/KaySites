@@ -48,6 +48,7 @@ const routes = {
 
   home: createRoute('home', LINKS.ADMIN),
   application: createRoute('application', LINKS.ADMIN),
+  adminUtilities: createRoute('admin-utilities', LINKS.ADMIN),
 
 }
 
