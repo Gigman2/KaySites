@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { CustomButton } from "components/Atoms";
 import PageHeader from "components/Blocks/Header";
 import Table from "components/Blocks/Table";
+import ClientWrapper from "pages/dashboard/wrapper";
 
 const tableColumn = () => [
     {
@@ -41,17 +42,18 @@ const tableData = () => [
 
 function Application() {
     return (
-    <Box>
-        <PageHeader title="Document Library"/>
-
-        <Box rounded={"lg"} px={8} py={12} mt={12}>
-            <Table
-                data={tableData()}
-                columns={tableColumn()}
-                title="Hello"
-            />
-        </Box>
-    </Box>
+        <ClientWrapper>
+            <Box>
+                <PageHeader title="Document Library"/>
+                <Box rounded={"lg"} px={8} py={12} mt={12}>
+                    <Table
+                        data={tableData()}
+                        columns={tableColumn()}
+                        title="Hello"
+                    />
+                </Box>
+            </Box>
+        </ClientWrapper>
     )
 }
 

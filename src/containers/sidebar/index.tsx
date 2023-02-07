@@ -33,12 +33,14 @@ function Sidebar() {
 
     useEffect(() => {
         setSidebarWidth(0)
-        if(dashboard){
+        if(dashboard === 'admin'){
             if(showChildren){
                 setSidebarWidth(420)
             } else {
                 setSidebarWidth(220)
             }
+        } else if(dashboard === 'client'){
+            setSidebarWidth(250)
         }
     }, [showChildren, dashboard])
 
@@ -48,7 +50,7 @@ function Sidebar() {
         return (
             <Box>
                 <Box width={"100%"} position="relative">
-                    <Box width={"220px"} 
+                    <Box width={dashboard === 'admin' ?"220px" : "250px"} 
                         py={4} 
                         key={item.name} 
                         cursor="pointer"
