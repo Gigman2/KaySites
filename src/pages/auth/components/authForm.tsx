@@ -8,11 +8,14 @@ import { Link as RLink} from 'react-router-dom'
 
 const AuthForm: React.FC<{invertColors?: boolean; isSignUpForm?: boolean}> = ({invertColors, isSignUpForm}) => {
   return <Flex h="100%" w="100%" flexDirection={"column"} align="center" justify={"center"} px={20}>
-          <Box>
+          <Box minW={'500px'} >
             <Flex justify={"center"}>
               <Image src={Logo} w={12} />
             </Flex>
             <Text fontSize={56} textAlign="center" color={invertColors? "white" :"kc.500"} fontWeight={600}>Welcome!</Text>
+            <Text fontSize={16} fontWeight={600} textAlign="center" color={invertColors? "white" :"kc.500"}>
+              {isSignUpForm ? "Dont have an account yet ? " : "Login and get started"}
+            </Text>
 
             <Box mt={6}>
               <Box rounded={'2xl'} borderWidth={2} borderColor={invertColors? "white" :"kc.500"} px={6} py={1}>
