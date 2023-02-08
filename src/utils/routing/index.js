@@ -30,6 +30,8 @@ const routes = {
   // APPLICATIONS //
   applications: createRoute('applications', LINKS.DASHBOARD),
 
+  // MESSAGES //
+  messages: createRoute('messages', LINKS.DASHBOARD),
   // PAYMENT //
   payment: createRoute('payments', LINKS.DASHBOARD),
   addCard: createRoute('add-card', LINKS.DASHBOARD),
@@ -48,8 +50,12 @@ const routes = {
 
   home: createRoute('home', LINKS.ADMIN),
   application: createRoute('application', LINKS.ADMIN),
-  adminUtilities: createRoute('admin-utilities', LINKS.ADMIN),
+  all: createRoute('all', LINKS.ADMIN),
 
+  adminUtilities: createRoute('admin-utilities', LINKS.ADMIN),
+  accounts: createRoute('accounts', LINKS.ADMIN),
+
+  policyDocument: createRoute('policy-document', LINKS.ADMIN),
 }
 
 export const pathTo = Object.fromEntries(

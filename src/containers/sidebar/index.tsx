@@ -28,13 +28,15 @@ function Sidebar() {
         navigate(item.path)
         if(item.children && item.id === currentPage){
             setShowChildren(!showChildren)
+        }else {
+            setShowChildren(true)
         }
     }
 
     useEffect(() => {
         setSidebarWidth(0)
         if(dashboard === 'admin'){
-            if(showChildren){
+            if(showChildren && currentPage !== 1){
                 setSidebarWidth(420)
             } else {
                 setSidebarWidth(220)
@@ -42,6 +44,7 @@ function Sidebar() {
         } else if(dashboard === 'client'){
             setSidebarWidth(250)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showChildren, dashboard])
 
     useEffect(() => {}, [])
@@ -67,7 +70,7 @@ function Sidebar() {
                     </Box>
                     {(showChildren && item.id === currentPage) && <Box>
                     {item.children && 
-                        <Box position={"absolute"} bg="white" left={'220px'} w="220px" top={'30px'} zIndex={100}>
+                        <Box position={"absolute"} bg="white" left={'220px'} w="220px" top={'0px'} zIndex={100}>
                             {item?.children.map(child =>  <Flex 
                                 py={4} 
                                 px={4} 
@@ -75,6 +78,7 @@ function Sidebar() {
                                 color="kc.500"
                                 cursor={"pointer"}
                                 _hover={{bg: 'kc.200', borderRightWidth: 3, borderColor: "kc.500"}} 
+                                onClick={() => child.path && navigate(`${item.path}/${child.path}`)}
                                 >{child.name}
                             </Flex>)}
                         </Box>}

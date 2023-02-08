@@ -1,28 +1,34 @@
 import {RxDashboard} from 'react-icons/rx'
-import {RiAdminLine, RiHome3Line, RiBankCardFill} from 'react-icons/ri'
+import {RiAdminLine, RiHome3Line, RiBankCardFill, RiLoader4Fill} from 'react-icons/ri'
 import {MdOutlinePolicy, MdOutlineSettingsSuggest, MdOutlineDocumentScanner} from 'react-icons/md'
 import {TbMessages, TbBuildingBank, TbUserPlus} from 'react-icons/tb'
+import {HiOutlineDocumentMagnifyingGlass} from 'react-icons/hi2'
 
 export const clientPages = [
     {
+        icon: RxDashboard,
         name: "My Application",
         path: "applications",
         id: 1
     },
     {
+        icon: HiOutlineDocumentMagnifyingGlass,
         name: "Document Library",
         path: "document-library",
         id: 2
     },
     {
+        icon: TbMessages,
         name: "Messages",
         path: "messages",
         id: 3
     },{
+        icon: RiBankCardFill,
         name: "Payment Information",
         path: "payments",
         id: 4
     },{
+        icon: RiLoader4Fill,
         name: "Application Progress",
         path: "application-progress",
         id: 5
@@ -48,7 +54,7 @@ export const adminPages = [
             },
             {
                 name: "All Application - USSD Only",
-                path: "all-ussd",
+                path: "all",
             },
             {
                 name: "USSD Applications",
@@ -124,7 +130,7 @@ export const adminPages = [
         children: [
             {
                 name: "All Documents",
-                path: "documents",
+                path: "all",
             }
         ]
     },
