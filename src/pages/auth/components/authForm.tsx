@@ -4,6 +4,7 @@ import { FiAtSign } from 'react-icons/fi'
 import { TfiLock } from 'react-icons/tfi'
 import { CustomButton } from 'components/Atoms';
 import GLogo from 'assets/images/G__Logo.svg.png'
+import { Link as RLink} from 'react-router-dom'
 
 const AuthForm: React.FC<{invertColors?: boolean; isSignUpForm?: boolean}> = ({invertColors, isSignUpForm}) => {
   return <Flex h="100%" w="100%" flexDirection={"column"} align="center" justify={"center"} px={20}>
@@ -61,10 +62,14 @@ const AuthForm: React.FC<{invertColors?: boolean; isSignUpForm?: boolean}> = ({i
               <Flex align={"center"} gap={1}>
                 {isSignUpForm ? <>
                   <Text color={"gray.400"} fontSize={14}>Already have an account ?</Text>
-                  <Text color={invertColors? "white" :"kc.500"} fontSize={14} fontWeight="bold">Sign In</Text>
+                  <RLink to={'/login'}>
+                    <Text color={invertColors? "white" :"kc.500"} fontSize={14} fontWeight="bold">Sign In</Text>
+                  </RLink>
                 </> : <>
                   <Text color={"gray.400"} fontSize={14}>Do you have an account yet?</Text>
-                  <Text color={invertColors? "white" :"kc.500"} fontSize={14} fontWeight="bold">Sign Up</Text>
+                  <RLink to={'/signup'}>
+                    <Text color={invertColors? "white" :"kc.500"} fontSize={14} fontWeight="bold">Sign Up</Text>
+                  </RLink>
                 </>}
               </Flex>
             </Flex>
