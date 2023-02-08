@@ -56,6 +56,17 @@ const routes = {
   accounts: createRoute('accounts', LINKS.ADMIN),
 
   policyDocument: createRoute('policy-document', LINKS.ADMIN),
+
+  institution: createRoute('institutions', LINKS.ADMIN),
+
+  fees: createRoute('fees', LINKS.ADMIN),
+
+  registeredUsers: createRoute('registered-users', LINKS.ADMIN),
+
+  financials: createRoute('financials', LINKS.ADMIN),
+
+  settings: createRoute('settings', LINKS.ADMIN),
+
 }
 
 export const pathTo = Object.fromEntries(

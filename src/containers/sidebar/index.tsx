@@ -36,7 +36,7 @@ function Sidebar() {
     useEffect(() => {
         setSidebarWidth(0)
         if(dashboard === 'admin'){
-            if(showChildren && currentPage !== 1){
+            if(showChildren && !([1, 9, 10, 8, 7].includes(currentPage as number))){
                 setSidebarWidth(420)
             } else {
                 setSidebarWidth(220)

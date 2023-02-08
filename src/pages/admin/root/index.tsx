@@ -9,6 +9,8 @@ const Home = lazy(() => import('../components/home'))
 const ApplicationRoot = lazy(() => import('./application'))
 const AdminUtilitiesRoot = lazy(() => import('./adminUtilities'))
 const PolicyDocumentRoot = lazy(() => import('./policyDocument'))
+const InstitutionRoot = lazy(() => import('./institution'))
+
 
 
 function AdminRoot() {
@@ -23,6 +25,11 @@ function AdminRoot() {
                 <Route path={`${pathTo.application}/*`} element={<ApplicationRoot />} />
                 <Route path={`${pathTo.adminUtilities}/*`} element={<AdminUtilitiesRoot />} />
                 <Route path={`${pathTo.policyDocument}/*`} element={<PolicyDocumentRoot />} />
+                <Route path={`${pathTo.institution}/*`} element={<InstitutionRoot />} />
+                <Route path={`${pathTo.fees}/*`} element={<InstitutionRoot />} />
+                <Route path={`${pathTo.registeredUsers}/*`} element={<InstitutionRoot />} />
+                <Route path={`${pathTo.financials}/*`} element={<InstitutionRoot />} />
+                <Route path={`${pathTo.settings}/*`} element={<InstitutionRoot />} />
             </Route>
         </Routes>
     );
