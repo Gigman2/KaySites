@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Image, Input, Text } from '@chakra-ui/react';
+import { Box, Flex, Icon, Image, Input, Link, Text } from '@chakra-ui/react';
 import Logo from 'assets/images/logo.png'
 import { FiAtSign } from 'react-icons/fi'
 import { TfiLock } from 'react-icons/tfi'
@@ -67,6 +67,11 @@ const AuthForm: React.FC<{invertColors?: boolean; isSignUpForm?: boolean}> = ({i
                   <Text color={invertColors? "white" :"kc.500"} fontSize={14} fontWeight="bold">Sign Up</Text>
                 </>}
               </Flex>
+            </Flex>
+            <Flex justify={"center"} mt={5}>
+              <Link href="https://kayclassified.com/">
+                <Text color={invertColors? "white" :"kc.500"} fontSize={14} fontWeight="bold">Go Back Home</Text>
+              </Link>
             </Flex>
           </Box>
         </Flex>;

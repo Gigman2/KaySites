@@ -1,16 +1,15 @@
 import { Box, Grid, GridItem, } from '@chakra-ui/react';
-import LoginWelcome from 'assets/images/KC Welcome LogIn.png'
+import LoginWelcome from 'assets/images/login-2.png'
 import AuthForm from './authForm';
 
 function Login() {
   return <Box>
-    <Grid  templateColumns={{ md: 'repeat(12, 1fr)' }}  h="100vh" 
-      bgImage={`url('${LoginWelcome}')`} bgPosition="250% 50%">
-      <GridItem colSpan={7} bg="transparent"></GridItem>
-      <GridItem colSpan={5} bg="white">
-        <AuthForm />
-      </GridItem>
-    </Grid>
+    <Box w="100vw" h="100vh"  bgImage={`url('${LoginWelcome}')`} bgSize="cover">
+      <Box pos="absolute" zIndex={2} bg="rgba(0, 0,0, 0.7)" w="100%" h="100%"></Box>
+      <Box pos="relative" zIndex={3} w={'600px'} mx="auto" pt={6}>
+        <AuthForm invertColors={true} isSignUpForm={false} />
+      </Box>
+    </Box>
   </Box>;
 }
 
