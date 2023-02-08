@@ -13,10 +13,6 @@ const AuthForm: React.FC<{invertColors?: boolean; isSignUpForm?: boolean}> = ({i
               <Image src={Logo} w={12} />
             </Flex>
             <Text fontSize={56} textAlign="center" color={invertColors? "white" :"kc.500"} fontWeight={600}>Welcome!</Text>
-            <Text fontSize={12} color={invertColors? "white" :"kc.500"}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Molestias eum optio facilis repudiandae omnis ut quae, 
-              unde aliquid reprehenderit, officia consequuntur dolorem.
-            </Text>
 
             <Box mt={6}>
               <Box rounded={'2xl'} borderWidth={2} borderColor={invertColors? "white" :"kc.500"} px={6} py={1}>
