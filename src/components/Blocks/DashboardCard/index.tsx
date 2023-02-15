@@ -16,7 +16,7 @@ const DashboardCard: React.FC<IFetchCardProps> = ({
   value,
   even
 }) => (
-    <Flex justifyContent={"space-between"} padding={4} color={"kc.500"} minH={32} bg={even ? "kc.100": ''}>
+    <Flex justifyContent={"space-between"} padding={4} color={"kc.500"} minH={32} bg={even ? "kc.100": ''} _hover={{textShadow: "0 0 1px #128910", cursor: "pointer"}}>
         <Box>
             <Box fontWeight={"bold"} fontSize={14}>{title}</Box>
             <Box fontSize={12}>{subtext}</Box>

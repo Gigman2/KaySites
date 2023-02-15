@@ -48,7 +48,7 @@ const TableContent = ({
           p={3}
           whiteSpace="nowrap"
           color="#333333"
-          fontSize={rem(14)}
+          fontSize={14}
           lineHeight={rem(24)}
         >
           {typeof selector?.selector === 'string' &&
